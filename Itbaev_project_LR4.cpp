@@ -32,6 +32,15 @@ int enterB()
 
 int enterC()
 {
+    int C;
+    cout << "Введите C (≠ 0): ";
+    while (!(cin >> C) || C == 0)
+    {
+        cin.clear();
+        cin.ignore(10000, '\n');
+        cout << "Ошибка! Введите целое число C, не равное нулю: ";
+    }
+    return C;
 }
 
 void remainder_of_difference()
