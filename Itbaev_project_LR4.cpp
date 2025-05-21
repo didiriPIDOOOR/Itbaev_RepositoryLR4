@@ -45,6 +45,13 @@ int enterC()
 
 void remainder_of_difference()
 {
+    int A = enterA();
+    int B = enterB();
+    int C = enterC();
+
+    int result = (A - B) % C;
+    cout << "Результат: (A - B) % C = " << result << "\n";
+    results.push_back(result);
 }
 
 void integer_division_part()
