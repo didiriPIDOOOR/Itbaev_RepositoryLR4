@@ -6,6 +6,15 @@ vector<int> results;
 
 int enterA()
 {
+    int A;
+    cout << "Введите A: ";
+    while (!(cin >> A))
+    {
+        cin.clear();
+        cin.ignore(10000, '\n');
+        cout << "Ошибка! Введите целое число A: ";
+    }
+    return A;
 }
 
 int enterB()
