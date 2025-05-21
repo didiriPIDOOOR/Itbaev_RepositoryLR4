@@ -19,6 +19,15 @@ int enterA()
 
 int enterB()
 {
+    int B;
+    cout << "Введите B: ";
+    while (!(cin >> B))
+    {
+        cin.clear();
+        cin.ignore(10000, '\n');
+        cout << "Ошибка! Введите целое число B: ";
+    }
+    return B;
 }
 
 int enterC()
