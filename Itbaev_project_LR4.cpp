@@ -23,9 +23,18 @@ int main()
         switch (choice)
         {
         case 1:
-            remainder_of_difference();
+            enterA();
             break;
         case 2:
+            enterB();
+            break;
+        case 3:
+            enterC();
+            break;
+        case 4:
+            remainder_of_difference();
+            break;
+        case 5:
             integer_division_part();
             break;
         case 0:
