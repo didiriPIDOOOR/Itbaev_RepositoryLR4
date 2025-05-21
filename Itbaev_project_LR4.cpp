@@ -56,6 +56,20 @@ void remainder_of_difference()
 
 void integer_division_part()
 {
+    int A = enterA();
+    int B = enterB();
+    int C = enterC();
+
+    int denominator = B + C;
+    if (denominator == 0)
+    {
+        cout << "Ошибка: сумма B + C равна нулю. Деление невозможно.\n";
+        return;
+    }
+
+    int result = A / denominator;
+    cout << "Результат: A / (B + C) = " << result << "\n";
+    results.push_back(result);
 }
 
 void showResults()
