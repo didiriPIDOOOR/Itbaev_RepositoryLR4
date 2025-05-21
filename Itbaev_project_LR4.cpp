@@ -1,12 +1,43 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
-int enterA();
-int enterB();
-int enterC();
+vector<int> results;
 
-void remainder_of_difference();
-void integer_division_part();
+int enterA()
+{
+}
+
+int enterB()
+{
+}
+
+int enterC()
+{
+}
+
+void remainder_of_difference()
+{
+}
+
+void integer_division_part()
+{
+}
+
+void showResults()
+{
+    if (results.empty())
+    {
+        cout << "Результатов пока нет.\n";
+        return;
+    }
+
+    cout << "\nСписок всех полученных результатов:\n";
+    for (size_t i = 0; i < results.size(); ++i)
+    {
+        cout << i + 1 << ") " << results[i] << "\n";
+    }
+}
 
 int main()
 {
@@ -16,6 +47,7 @@ int main()
         cout << "\n=== МЕНЮ ===\n";
         cout << "1. Найти остаток от деления разности A и B на C\n";
         cout << "2. Найти целую часть от деления A на сумму B и C\n";
+        cout << "3. Показать все полученные результаты\n";
         cout << "0. Выход\n";
         cout << "Выберите действие: ";
         cin >> choice;
@@ -23,19 +55,13 @@ int main()
         switch (choice)
         {
         case 1:
-            enterA();
-            break;
-        case 2:
-            enterB();
-            break;
-        case 3:
-            enterC();
-            break;
-        case 4:
             remainder_of_difference();
             break;
-        case 5:
+        case 2:
             integer_division_part();
+            break;
+        case 3:
+            showResults();
             break;
         case 0:
             cout << "Выход из программы.\n";
